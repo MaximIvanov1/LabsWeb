@@ -3,8 +3,16 @@
 @import "tailwindcss/theme.css" layer(theme) source('../..');
 @import "tailwindcss/utilities.css" layer(theme) source('../..');
 
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+}
+
 @theme static {
     --color-brand-100: #e6eef6;
     --color-brand-500: #002b5c;
     --color-brand-600: #01356f;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
